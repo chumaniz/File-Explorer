@@ -17,4 +17,11 @@ def open_a_file():
     try:
         os.startfile(string)
     except:
-        mb.showinfo('File-Found', "File")
+        mb.showinfo('Notice', "File Not Found!")
+
+# Function for copying a file
+def copy_a_file():
+    source_original = open_a_window
+    location_original = filedialog.askdirectory()
+    shutil.copy(source_original,location_original)
+    mb.showinfo('Notice', "File Copied!")
