@@ -25,3 +25,11 @@ def copy_a_file():
     location_original = filedialog.askdirectory()
     shutil.copy(source_original,location_original)
     mb.showinfo('Notice', "File Copied!")
+
+# Function for deleting a file
+def delete_a_file():
+    delete_a_file = open_a_window
+    if os.path.exists(delete_a_file):
+        os.remove(delete_a_file)
+    else:
+        mb.showinfo('Notice', "File Not Found!")
