@@ -33,3 +33,15 @@ def delete_a_file():
         os.remove(delete_a_file)
     else:
         mb.showinfo('Notice', "File Not Found!")
+
+# Function for renaming a file 
+def rename_a_file():
+    selectedFile = open_a_window()
+    path_source = os.path.dirname(selectedFile)
+    extender = os.path.splitext(selectedFile) [1]
+    print("Enter new File name")
+    newFileName = input()
+    path = os.path.join(path_source, newFileName+extender)
+    print(path)
+    os.rename(selectedFile,path)
+    mb.showinfo('Notice', "File Renamed!")
