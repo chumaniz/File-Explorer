@@ -45,3 +45,13 @@ def rename_a_file():
     print(path)
     os.rename(selectedFile,path)
     mb.showinfo('Notice', "File Renamed!")
+
+# Function for moving a file
+def move_a_folder():
+    source = open_a_window()
+    location = filedialog.askdirectory()
+    if (source==location):
+        mb.showinfo('Notice', "Source and location are concurrent")
+    else:
+        shutil.move(source, location)  
+        mb.showinfo('Notice', "File Moved Successfully!")  
