@@ -72,3 +72,13 @@ def delete_a_folder():
     os.rmdir(delete_a_folder)
     os.remove(delete_a_folder)
     mb.showinfo('Notice', "File Deleted")
+
+# Function for listing all files in a folder 
+def list_all_files():
+    treelist = filedialog.askdirectory()
+    sortedList = sorted(os.listdir(treelist))
+    i = 0
+    print("Files in ", treelist, "folders are:")
+    while(i<len(sortedList)):
+        print(sortedList[i]+'\n')
+        i+=1
