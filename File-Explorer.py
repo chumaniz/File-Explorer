@@ -56,7 +56,7 @@ def move_a_folder():
         shutil.move(source, location)  
         mb.showinfo('Notice', "File Moved Successfully!")
 
-# Making a Folder
+# Function for Making a Folder
 def make_a_folder():
     brandNewFolderPath = filedialog.askdirectory()
     print("Enter New Folder Name")  
@@ -65,3 +65,10 @@ def make_a_folder():
 
     os.mkdir(path)
     mb.showinfo('Notice', "Folder Made Successfully!")
+
+# Function for Deleting a Folder
+def delete_a_folder():
+    delete_a_folder = filedialog.askdirectory()
+    os.rmdir(delete_a_folder)
+    os.remove(delete_a_folder)
+    mb.showinfo('Notice', "File Deleted")
