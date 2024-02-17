@@ -54,4 +54,14 @@ def move_a_folder():
         mb.showinfo('Notice', "Source and location are concurrent")
     else:
         shutil.move(source, location)  
-        mb.showinfo('Notice', "File Moved Successfully!")  
+        mb.showinfo('Notice', "File Moved Successfully!")
+
+# Making a Folder
+def make_a_folder():
+    brandNewFolderPath = filedialog.askdirectory()
+    print("Enter New Folder Name")  
+    brandNewFolder = input()
+    path = os.path.join(brandNewFolderPath, brandNewFolder)
+
+    os.mkdir(path)
+    mb.showinfo('Notice', "Folder Made Successfully!")
